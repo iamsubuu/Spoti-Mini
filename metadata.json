@@ -1,0 +1,6 @@
+{
+  "name": "Spotify Mini",
+  "description": "A refined Spotify Web Mini Player Chrome Extension interface prototype with floating player modes, synchronized lyrics, and themeable settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
