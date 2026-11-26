@@ -67,11 +67,14 @@ This builds the complete Chrome Extension into the `dist/` directory:
 To run the borderless, always-on-top macOS-style Dynamic Island **outside Chrome** (with zero `open.spotify.com` bar):
 
 1. Ensure the Chrome Extension is loaded in Chrome and `https://open.spotify.com` is open.
-2. Launch the Desktop Dynamic Island companion:
-   ```bash
-   npm run desktop
-   ```
-3. The frameless frosted-glass Dynamic Island pill appears at the top-center of your screen and stays on top of all desktop apps. Use the system tray icon to show/hide, snap to top-center, or quit.
+2. Launch the Desktop Dynamic Island companion using either:
+   - Double-click **`Start-Dynamic-Island.vbs`** in the project folder (runs silently with no terminal window — you can also pin a shortcut to your Desktop or Windows `shell:startup`), **or**
+   - Run from terminal:
+     ```bash
+     npm run desktop:start
+     ```
+     *(Use `npm run desktop` if you also want to rebuild `dist/` first.)*
+3. The frameless frosted-glass Dynamic Island pill appears at the top-center of your monitor and stays on top of all desktop apps even when Chrome is minimized. Use the system tray icon to show/hide, snap to top-center, or quit.
 
 ### Local UI Showcase & Tests
 
@@ -113,3 +116,5 @@ Automated tests cover LRC parsing, DOM extraction/dispatch, settings persistence
    - Change Theme, Lyrics Font Size, Compact Mode, Default Display Mode, Auto-Open Floating, and LRCLIB Fallback, then close and reopen the popup and Document PiP window to verify persistence via `chrome.storage.local`.
 
 > **Note on Chrome User Activation:** By browser security design, `documentPictureInPicture.requestWindow()` requires a direct user gesture inside the long-lived `open.spotify.com` page context. When launching from the extension popup or via **Auto-Open Floating**, the extension focuses the Spotify tab and shows a one-click **Launch Floating** banner if a fresh page gesture is needed.
+#   S p o t i - M i n i  
+ 
