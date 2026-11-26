@@ -206,8 +206,18 @@ function createWindow() {
   }
 
   mainWindow.once('ready-to-show', () => {
-    mainWindow?.showInactive();
+    if (!mainWindow || mainWindow.isDestroyed()) return;
+    mainWindow.showInactive();
+    mainWindow.setAlwaysOnTop(true, 'screen-saver');
     pushStateToRenderer();
+  });
+
+  mainWindow.on('show', () => {
+    mainWindow?.setAlwaysOnTop(true, 'screen-saver');
+  });
+
+  mainWindow.on('blur', () => {
+    mainWindow?.setAlwaysOnTop(true, 'screen-saver');
   });
 
   mainWindow.on('closed', () => {
