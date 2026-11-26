@@ -117,4 +117,5 @@ Automated tests cover LRC parsing, DOM extraction/dispatch, settings persistence
 
 > **Note on Chrome User Activation:** By browser security design, `documentPictureInPicture.requestWindow()` requires a direct user gesture inside the long-lived `open.spotify.com` page context. When launching from the extension popup or via **Auto-Open Floating**, the extension focuses the Spotify tab and shows a one-click **Launch Floating** banner if a fresh page gesture is needed.
 #   S p o t i - M i n i  
+ #   S p o t i - M i n i  
  
